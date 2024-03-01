@@ -4,11 +4,11 @@ class PagesController < ApplicationController
 
   require "json"
   require "open-uri"
-  require "active_support/hash_with_indifferent_access"
 
   def restaurant
     @postcode = params[:postcode]
-    url = "https://uk.api.just-eat.io/discovery/uk/restaurants/enriched/bypostcode/#{@postcode}"
+    joinedpostcode = @postcode.split(" ").join
+    url = "https://uk.api.just-eat.io/discovery/uk/restaurants/enriched/bypostcode/#{joinedpostcode}"
     @restaurants = JSON.parse(URI.open("#{url}").read).dig('restaurants')
   end
 end
