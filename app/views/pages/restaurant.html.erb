@@ -1,11 +1,16 @@
-<div>
-  <div>
-    <h1>Restaurants in <%= @postcode %></h1>
-  </div>
+<h1>Restaurants in <%= @postcode %></h1>
 
-  <div class="answer">
-    <strong><%= @restaurants %></strong>
-  </div>
-</div>
+<% @restaurants.take(10).each do |restaurant| %>
+  <h4><%= "#{restaurant['name']}"%></h4>
+  <ul>
+    <% @cuisines = [] %>
+    <% restaurant['cuisines'].each do |cuisine| %>
+      <% @cuisines << cuisine['name'] %>
+    <% end %>
+    <li><%= "Cuisines: "%><%= @cuisines.join(", ") %></li>
+    <li><%= "Rating: #{restaurant['rating']['count']}"%></li>
+    <li><%= "Address: #{restaurant['address']['firstLine']}, #{restaurant['address']['city']}, #{restaurant['address']['postalCode']}"%></li>
+  </ul>
+<% end %>
 
-  <%= link_to "Search again!", root_path %>
+<%= link_to "Search again!", root_path %>
