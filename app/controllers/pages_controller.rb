@@ -15,4 +15,4 @@ end
 
 
 # TODO
-# Optional: first, check if the postcode is valid (https://github.com/threedaymonk/uk_postcode)
+# Optional: check if the postcode is valid (https://github.com/threedaymonk/uk_postcode)
