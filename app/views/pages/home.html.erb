@@ -1,0 +1,9 @@
+<h1>Let's find some restaurant data!</h1>
+
+<div class="container">
+  <form action="/restaurants" data-turbo="false" method="get" class="input-group mb-3">
+    <label for="postcode" class="form-label">Enter a postcode:</label>
+    <input type="text" class = "form-control" id="postcode" name="postcode" value="<%= params[:postcode] %>">
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
