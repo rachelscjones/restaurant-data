@@ -3,21 +3,21 @@
   <h1>Restaurants in <%= @postcode.upcase %></h1>
   <strong><%= link_to "Search again", root_path %></strong>
 
-<div class="cards">
-  <% @restaurants.take(10).each do |restaurant| %>
-    <div class="card p-3">
-      <h4><%= "#{restaurant['name']}"%></h4>
-      <ul>
-        <% @cuisines = [] %>
-          <% restaurant['cuisines'].each do |cuisine| %>
-            <% @cuisines << cuisine['name'] %>
-        <% end %>
-        <li><%= "Cuisines: "%><%= @cuisines.join(", ") %></li>
-        <li><%= "Rating: #{restaurant['rating']['starRating']}"%></li>
-        <li><%= "Address: #{restaurant['address']['firstLine']}, #{restaurant['address']['city']}, #{restaurant['address']['postalCode']}"%></li>
-      </ul>
-    </div>
-  <% end %>
-</div>
+  <div class="cards">
+    <% @restaurants.take(10).each do |restaurant| %>
+      <div class="card p-3">
+        <h4><%= "#{restaurant['name']}"%></h4>
+        <ul>
+          <% @cuisines = [] %>
+            <% restaurant['cuisines'].each do |cuisine| %>
+              <% @cuisines << cuisine['name'] %>
+          <% end %>
+          <li><%= "Cuisines: "%><%= @cuisines.join(", ") %></li>
+          <li><%= "Rating: #{restaurant['rating']['starRating']}"%></li>
+          <li><%= "Address: #{restaurant['address']['firstLine']}, #{restaurant['address']['city']}, #{restaurant['address']['postalCode']}"%></li>
+        </ul>
+      </div>
+    <% end %>
+  </div>
 
 </div>
