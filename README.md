@@ -2,7 +2,7 @@
 
 #### Setup
 
-0. In order to run this solution locally, you will need to have installed Rails. Check them with:
+0. In order to run this solution locally, you will need to have installed Rails. Check with:
 
 ```bash
 $ rails --version
@@ -18,8 +18,8 @@ If no version number is returned, please install [Rails](https://guides.rubyonra
 $ bundle install
 ```
 
-The `bundle` command installs all Ruby Gems specified in our Gemfile. The `yarn install` command retrieves all dependencies from the project’s package.json file.
-<br>
+The `bundle` command installs all Ruby Gems specified in the Gemfile.
+
 <br>
 
 #### Launch 🚀
