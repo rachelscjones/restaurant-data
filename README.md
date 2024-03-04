@@ -1,24 +1,33 @@
-# README
+## Installation
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#### Setup
 
-Things you may want to cover:
+0. In order to run this solution locally, you will need to have installed Rails. Check them with:
 
-* Ruby version
+```bash
+$ rails --version
+```
 
-* System dependencies
+If no version number is returned, please install [Rails](https://guides.rubyonrails.org/v5.0/getting_started.html) before continuing.
 
-* Configuration
+#### Dependencies
 
-* Database creation
+1. You'll also need to install project dependencies with:
 
-* Database initialization
+```bash
+$ bundle install
+```
 
-* How to run the test suite
+The `bundle` command installs all Ruby Gems specified in our Gemfile. The `yarn install` command retrieves all dependencies from the project’s package.json file.
+<br>
+<br>
 
-* Services (job queues, cache servers, search engines, etc.)
+#### Launch 🚀
 
-* Deployment instructions
+Launch the solution by running:
 
-* ...
+```bash
+$ bin/rails s
+```
+
+Then go to [localhost:3000](http://localhost:3000/)
